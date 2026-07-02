@@ -58,11 +58,17 @@
   header.hero h1 .em{color:var(--tangerine)}
   .subtitle{margin-top:14px;font-size:clamp(15px,3.6vw,19px);color:var(--ink-soft)}
   .datebar{margin-top:26px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-  .daychip{font-family:"Jua";font-size:15px;padding:9px 16px;border-radius:14px;background:var(--card);
-    border:1px solid var(--line);box-shadow:var(--shadow-sm)}
-  .daychip b{color:var(--tangerine)}
+  .daychip{display:inline-flex;align-items:center;gap:10px;font-family:"Jua";padding:8px 14px;border-radius:14px;
+    background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+  .daychip .dpart{display:flex;align-items:baseline;gap:5px}
+  .daychip .dpart b{font-size:18px;color:var(--tangerine);line-height:1}
+  .daychip .dpart i{font-style:normal;font-size:12px;color:var(--ink-soft);font-family:"Gowun Dodum"}
+  .daychip .dlabel{font-size:13px;color:var(--ink-soft);font-family:"Gowun Dodum";padding-left:10px;
+    border-left:1px solid var(--line)}
   .daychip.hot{background:var(--tangerine);color:#fff;border-color:var(--tangerine)}
-  .daychip.hot b{color:#fff}
+  .daychip.hot .dpart b{color:#fff}
+  .daychip.hot .dpart i{color:rgba(255,255,255,.85)}
+  .daychip.hot .dlabel{color:rgba(255,255,255,.92);border-left-color:rgba(255,255,255,.45)}
   .stats{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
   .stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 22px;box-shadow:var(--shadow-sm);min-width:104px}
   .stat .n{font-family:"Jua";font-size:30px;color:var(--tangerine);line-height:1}
@@ -180,14 +186,14 @@
 <header class="hero">
   <div class="sun"></div>
   <div class="wrap">
-    <div class="kicker reveal d1">신흥역 하늘채 · 엄마집</div>
+    <div class="kicker reveal d1">신흥역하늘채랜더스원1단지 104-302</div>
     <h1 class="reveal d1">우리들의 <span class="em">여름 모임</span></h1>
-    <p class="subtitle reveal d2">금요일 저녁부터 월요일 점심까지, 3박 4일 · 세 가족 + α 대가족 캠프</p>
+    <p class="subtitle reveal d2">7/10(금)~7/13(월), 원영 다혜 형진 영은 성은 대가족 모임</p>
     <div class="datebar reveal d2">
-      <span class="daychip">금 <b>도착</b></span>
-      <span class="daychip hot">토 <b>전원 17명</b></span>
-      <span class="daychip">일 <b>13명</b></span>
-      <span class="daychip">월 <b>점심 해산</b></span>
+      <span class="daychip"><span class="dpart"><b>금</b><i>7/10</i></span><span class="dlabel">도착</span></span>
+      <span class="daychip hot"><span class="dpart"><b>토</b><i>7/11</i></span><span class="dlabel">전원 17명</span></span>
+      <span class="daychip"><span class="dpart"><b>일</b><i>7/12</i></span><span class="dlabel">13명</span></span>
+      <span class="daychip"><span class="dpart"><b>월</b><i>7/13</i></span><span class="dlabel">점심 해산</span></span>
     </div>
     <div class="stats reveal d3">
       <div class="stat"><div class="n">13</div><div class="l">숙박 인원</div></div>
