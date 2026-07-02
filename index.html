@@ -183,21 +183,16 @@
   /* polish */
   section{scroll-margin-top:72px}
   h1,h2,h3{text-wrap:balance}
-  .sec-note{max-width:62ch;text-wrap:pretty}
   .tl-time,.stat .n,.statprog .pn,.daychip .dpart i{font-variant-numeric:tabular-nums}
   nav a.n.active{background:var(--tangerine-soft);color:var(--tangerine)}
   a.n:focus-visible,.reset:focus-visible,label.ck input:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
   label.ck:hover input:not(:checked){border-color:var(--leaf)}
-  .day.fri .tl{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
-  .day.fri .tl-item:nth-last-child(-n+2){border-bottom:none}
 
   @media(max-width:720px){
     .rooms,.days,.progs,.checks{grid-template-columns:1fr}
     .day.wide{grid-column:auto}
     header.hero{padding:44px 0 30px}
     .tl-item{grid-template-columns:52px 1fr;gap:10px}
-    .day.fri .tl{grid-template-columns:1fr}
-    .day.fri .tl-item:nth-last-child(2){border-bottom:1px dashed var(--line)}
     .statgroup{width:100%;max-width:420px}
     .statgroup .stat{flex:1;min-width:0;padding:14px 10px}
     .statprog{width:100%;max-width:420px;justify-content:center}
@@ -260,7 +255,7 @@
     <p class="sec-note">매일 <b>오전엔 나가 놀고, 낮잠 뒤엔 선생님 프로그램, 저녁엔 다 함께</b> — 이 리듬으로 움직여요.</p>
     <div class="days">
 
-      <div class="day fri wide reveal d1">
+      <div class="day fri reveal d1">
         <div class="day-head"><span class="dow">금</span><span class="dsub">도착 &amp; 취침</span><span class="pill">가볍게</span></div>
         <div class="tl">
           <div class="tl-item"><div class="tl-time">19:00</div><div class="tl-body"><div class="t">도착 · 짐 풀기</div></div></div>
@@ -270,7 +265,7 @@
         </div>
       </div>
 
-      <div class="day sat wide reveal d2">
+      <div class="day sat reveal d2">
         <div class="day-head"><span class="dow">토</span><span class="dsub">전원 17명 · 가족4 합류</span><span class="pill">하이라이트</span></div>
         <div class="tl">
           <div class="tl-item"><div class="tl-time">07:30</div><div class="tl-body"><div class="t">기상 · 아침</div><div class="d">당번제 (토스트·시리얼·과일·계란)</div></div></div>
