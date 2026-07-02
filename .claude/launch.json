@@ -4,7 +4,7 @@
     {
       "name": "static",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["-y", "serve", "-l", "4321", "."],
+      "runtimeArgs": ["-y", "live-server", "--port=4321", "--no-browser", "--wait=200", "."],
       "port": 4321
     }
   ]

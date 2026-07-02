@@ -69,10 +69,24 @@
   .daychip.hot .dpart b{color:#fff}
   .daychip.hot .dpart i{color:rgba(255,255,255,.85)}
   .daychip.hot .dlabel{color:rgba(255,255,255,.92);border-left-color:rgba(255,255,255,.45)}
-  .stats{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  .stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 22px;box-shadow:var(--shadow-sm);min-width:104px}
-  .stat .n{font-family:"Jua";font-size:30px;color:var(--tangerine);line-height:1}
-  .stat .l{font-size:13px;color:var(--ink-soft);margin-top:5px}
+  .stats{margin-top:30px;display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap}
+  .statgroup{display:flex;background:var(--card);border:1px solid var(--line);border-radius:20px;
+    box-shadow:var(--shadow-sm);overflow:hidden}
+  .statgroup .stat{position:relative;padding:16px 26px;min-width:128px;text-align:center}
+  .statgroup .stat + .stat{border-left:1px solid var(--line)}
+  .stat .n{font-family:"Jua";font-size:34px;color:var(--tangerine);line-height:1}
+  .stat .n .unit{font-size:15px;margin-left:1px}
+  .stat .l{font-size:13.5px;color:var(--ink);margin-top:8px}
+  .stat .sub{font-size:12px;color:var(--ink-soft);margin-top:3px}
+  .stat.max{background:var(--tangerine-soft)}
+  .stat .tagmax{position:absolute;top:10px;right:11px;font-family:"Gaegu";font-weight:700;font-size:11px;
+    color:#fff;background:var(--tangerine);border-radius:7px;padding:1px 7px}
+  .statprog{display:flex;align-items:center;gap:13px;background:var(--leaf-soft);border:1px solid #C4DEA6;
+    border-radius:20px;padding:15px 24px;box-shadow:var(--shadow-sm)}
+  .statprog .pico{font-size:28px;line-height:1}
+  .statprog .pbody b{font-family:"Gowun Dodum";font-weight:700;font-size:13px;color:var(--leaf-ink);display:block}
+  .statprog .pn{font-family:"Jua";font-size:28px;color:var(--leaf);line-height:1.15;display:block}
+  .statprog .pn i{font-style:normal;font-size:14px;margin-left:1px}
 
   /* SECTION */
   section{padding:46px 0 8px}
@@ -196,10 +210,23 @@
       <span class="daychip"><span class="dpart"><b>월</b><i>7/13</i></span><span class="dlabel">점심 해산</span></span>
     </div>
     <div class="stats reveal d3">
-      <div class="stat"><div class="n">13</div><div class="l">숙박 인원</div></div>
-      <div class="stat"><div class="n">17</div><div class="l">토요일 최대</div></div>
-      <div class="stat"><div class="n">8</div><div class="l">아이들 (토)</div></div>
-      <div class="stat"><div class="n">6</div><div class="l">선생님 프로그램</div></div>
+      <div class="statgroup">
+        <div class="stat">
+          <div class="n">13<span class="unit">명</span></div>
+          <div class="l">숙박 인원</div>
+          <div class="sub">어른 7 · 아이 6</div>
+        </div>
+        <div class="stat max">
+          <span class="tagmax">최대</span>
+          <div class="n">17<span class="unit">명</span></div>
+          <div class="l">토요일</div>
+          <div class="sub">어른 9 · 아이 8</div>
+        </div>
+      </div>
+      <div class="statprog">
+        <span class="pico">🎨</span>
+        <div class="pbody"><b>선생님 프로그램</b><span class="pn">6<i>가지</i></span></div>
+      </div>
     </div>
   </div>
 </header>
