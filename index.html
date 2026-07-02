@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>우리들의 여름 모임 · 신흥역</title>
+<meta name="description" content="신흥역 하늘채, 금~월 3박 4일 가족 모임 — 잠자리 배치 · 4일 시간표 · 선생님 프로그램 · 준비물 체크리스트">
+<meta property="og:title" content="우리들의 여름 모임 · 신흥역">
+<meta property="og:description" content="금~월 3박 4일 · 잠자리 배치 · 4일 시간표 · 선생님 프로그램 · 준비물">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gaegu:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFF7EC; --paper2:#FBEBD5; --card:#FFFDF8;
+    --ink:#3B2C1F; --ink-soft:#8A7862; --line:#EBDCC5;
+    --tangerine:#EC7A3C; --tangerine-soft:#FBE1CD;
+    --leaf:#5C9C41; --leaf-soft:#DDEBC7; --leaf-ink:#33591F;
+    --sky:#3B93CC; --sky-soft:#CFE6F4; --sky-ink:#175074;
+    --sun:#F4B73C; --berry:#C7517A;
+    --shadow:0 10px 30px -12px rgba(80,54,24,.28);
+    --shadow-sm:0 4px 14px -8px rgba(80,54,24,.30);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Gowun Dodum",system-ui,sans-serif;
+    color:var(--ink); line-height:1.65;
+    background:
+      radial-gradient(1200px 520px at 78% -8%, #FFE7C2 0%, rgba(255,231,194,0) 60%),
+      radial-gradient(900px 480px at -8% 6%, #FBE3D2 0%, rgba(251,227,210,0) 55%),
+      var(--paper);
+    background-attachment:fixed;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  h1,h2,h3,.display{font-family:"Jua",sans-serif;font-weight:400;letter-spacing:.2px;line-height:1.25}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(9px);
+    background:rgba(255,247,236,.82);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:6px;height:56px}
+  nav .brand{font-family:"Jua";font-size:19px;color:var(--tangerine);margin-right:auto}
+  nav a.n{font-size:14px;color:var(--ink-soft);text-decoration:none;padding:7px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav a.n:hover{background:var(--tangerine-soft);color:var(--tangerine)}
+  .navlinks{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+  .navlinks::-webkit-scrollbar{display:none}
+
+  /* HERO */
+  header.hero{padding:64px 0 42px;text-align:center;position:relative;overflow:hidden}
+  .sun{position:absolute;top:-46px;right:8%;width:150px;height:150px;border-radius:50%;
+    background:radial-gradient(circle at 42% 40%,#FFD874,#F4A73C);opacity:.5;filter:blur(2px)}
+  .kicker{display:inline-block;font-family:"Gaegu";font-weight:700;font-size:16px;color:var(--berry);
+    background:#fff;border:2px dashed var(--berry);border-radius:999px;padding:5px 18px;margin-bottom:20px;
+    transform:rotate(-1.5deg)}
+  header.hero h1{font-size:clamp(38px,8vw,74px);color:var(--ink);position:relative}
+  header.hero h1 .em{color:var(--tangerine)}
+  .subtitle{margin-top:14px;font-size:clamp(15px,3.6vw,19px);color:var(--ink-soft)}
+  .datebar{margin-top:26px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+  .daychip{font-family:"Jua";font-size:15px;padding:9px 16px;border-radius:14px;background:var(--card);
+    border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+  .daychip b{color:var(--tangerine)}
+  .daychip.hot{background:var(--tangerine);color:#fff;border-color:var(--tangerine)}
+  .daychip.hot b{color:#fff}
+  .stats{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 22px;box-shadow:var(--shadow-sm);min-width:104px}
+  .stat .n{font-family:"Jua";font-size:30px;color:var(--tangerine);line-height:1}
+  .stat .l{font-size:13px;color:var(--ink-soft);margin-top:5px}
+
+  /* SECTION */
+  section{padding:46px 0 8px}
+  .sec-head{display:flex;align-items:center;gap:12px;margin-bottom:26px}
+  .sec-tag{font-family:"Jua";font-size:14px;color:#fff;background:var(--leaf);border-radius:10px;padding:4px 12px;box-shadow:var(--shadow-sm)}
+  .sec-head h2{font-size:clamp(24px,5vw,34px)}
+  .sec-note{color:var(--ink-soft);font-size:15px;margin:-14px 0 26px}
+
+  /* ROOM GRID */
+  .rooms{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .room{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow);
+    position:relative;transition:.2s;border-top:6px solid var(--leaf)}
+  .room:hover{transform:translateY(-3px)}
+  .room.host{border-top-color:var(--sun)}
+  .room .rname{font-family:"Jua";font-size:20px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .room .rmeta{font-size:13px;color:var(--ink-soft);margin:3px 0 14px}
+  .badge{font-family:"Gaegu";font-weight:700;font-size:13px;color:var(--tangerine);background:var(--tangerine-soft);
+    border-radius:8px;padding:2px 9px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{font-size:13.5px;padding:6px 12px;border-radius:11px;font-family:"Gowun Dodum";white-space:nowrap}
+  .chip.kid{background:var(--sky-soft);color:var(--sky-ink);border:1px solid #A9D3ED}
+  .chip.adult{background:var(--leaf-soft);color:var(--leaf-ink);border:1px solid #BFDCA0}
+  .legend{display:flex;gap:16px;margin:18px 2px 0;font-size:13px;color:var(--ink-soft);flex-wrap:wrap}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:12px;height:12px;border-radius:4px;display:inline-block}
+  .dot.kid{background:var(--sky-soft);border:1px solid #A9D3ED}
+  .dot.adult{background:var(--leaf-soft);border:1px solid #BFDCA0}
+
+  /* SCHEDULE */
+  .days{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .day{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+  .day.wide{grid-column:1/-1}
+  .day-head{padding:16px 20px;color:#fff;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .day.fri .day-head{background:linear-gradient(100deg,#8A7862,#A99075)}
+  .day.sat .day-head{background:linear-gradient(100deg,var(--tangerine),#F0954F)}
+  .day.sun .day-head{background:linear-gradient(100deg,var(--sky),#54A6D8)}
+  .day.mon .day-head{background:linear-gradient(100deg,var(--leaf),#78B255)}
+  .day-head .dow{font-family:"Jua";font-size:22px}
+  .day-head .dsub{font-size:13px;opacity:.92}
+  .day-head .pill{margin-left:auto;font-family:"Gaegu";font-weight:700;font-size:12px;background:rgba(255,255,255,.25);padding:3px 10px;border-radius:999px}
+  .tl{padding:8px 20px 18px}
+  .tl-item{display:grid;grid-template-columns:58px 1fr;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
+  .tl-item:last-child{border-bottom:none}
+  .tl-time{font-family:"Jua";font-size:14px;color:var(--tangerine);padding-top:1px}
+  .tl-body .t{font-size:15px}
+  .tl-body .d{font-size:13px;color:var(--ink-soft)}
+  .tag{display:inline-block;font-size:11px;font-family:"Gaegu";font-weight:700;padding:1px 8px;border-radius:7px;margin-left:6px;vertical-align:middle}
+  .tag.out{background:var(--sky-soft);color:var(--sky-ink)}
+  .tag.prog{background:var(--leaf-soft);color:var(--leaf-ink)}
+  .tag.fun{background:#F7E1AE;color:#8A5B12}
+
+  /* PROGRAMS */
+  .progs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .prog{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow-sm);transition:.2s}
+  .prog:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .prog .ico{font-size:30px;line-height:1}
+  .prog h3{font-size:19px;margin:10px 0 2px}
+  .prog .who{font-family:"Gaegu";font-weight:700;font-size:13px;color:var(--berry)}
+  .prog .desc{font-size:14px;margin:9px 0 12px;color:var(--ink)}
+  .prog .mat{font-size:12.5px;color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:10px}
+  .prog .mat b{color:var(--leaf-ink)}
+  .teacher-note{background:var(--leaf-soft);border:1px solid #C4DEA6;border-radius:16px;padding:16px 20px;margin-bottom:24px;
+    font-size:14.5px;color:var(--leaf-ink)}
+  .teacher-note b{font-family:"Jua"}
+
+  /* CHECKLIST */
+  .checks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .checkcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow-sm)}
+  .checkcard h3{font-size:17px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .checkcard h3 .ci{font-size:20px}
+  label.ck{display:flex;align-items:flex-start;gap:10px;padding:6px 0;cursor:pointer;font-size:14.5px;user-select:none}
+  label.ck input{appearance:none;-webkit-appearance:none;width:20px;height:20px;border:2px solid var(--line);border-radius:7px;
+    margin-top:2px;flex:none;cursor:pointer;transition:.15s;background:#fff;position:relative}
+  label.ck input:checked{background:var(--leaf);border-color:var(--leaf)}
+  label.ck input:checked::after{content:"✓";position:absolute;color:#fff;font-size:13px;left:3px;top:-2px;font-weight:700}
+  label.ck input:checked + span{color:var(--ink-soft);text-decoration:line-through}
+  .reset{margin-top:18px;font-family:"Gaegu";font-weight:700;font-size:14px;background:none;border:2px dashed var(--line);
+    color:var(--ink-soft);border-radius:999px;padding:8px 18px;cursor:pointer;transition:.18s}
+  .reset:hover{border-color:var(--berry);color:var(--berry)}
+
+  footer{text-align:center;padding:48px 20px 60px;color:var(--ink-soft);font-size:14px}
+  footer .heart{color:var(--berry)}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(16px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .d1{animation-delay:.05s}.d2{animation-delay:.13s}.d3{animation-delay:.22s}.d4{animation-delay:.32s}
+
+  @media(max-width:720px){
+    .rooms,.days,.progs,.checks{grid-template-columns:1fr}
+    .day.wide{grid-column:auto}
+    header.hero{padding:44px 0 30px}
+    .tl-item{grid-template-columns:52px 1fr;gap:10px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">🏖️ 여름 모임</span>
+    <div class="navlinks">
+      <a class="n" href="#rooms">잠자리</a>
+      <a class="n" href="#schedule">일정</a>
+      <a class="n" href="#programs">프로그램</a>
+      <a class="n" href="#checklist">준비물</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="sun"></div>
+  <div class="wrap">
+    <div class="kicker reveal d1">신흥역 하늘채 · 엄마집</div>
+    <h1 class="reveal d1">우리들의 <span class="em">여름 모임</span></h1>
+    <p class="subtitle reveal d2">금요일 저녁부터 월요일 점심까지, 3박 4일 · 세 가족 + α 대가족 캠프</p>
+    <div class="datebar reveal d2">
+      <span class="daychip">금 <b>도착</b></span>
+      <span class="daychip hot">토 <b>전원 17명</b></span>
+      <span class="daychip">일 <b>13명</b></span>
+      <span class="daychip">월 <b>점심 해산</b></span>
+    </div>
+    <div class="stats reveal d3">
+      <div class="stat"><div class="n">13</div><div class="l">숙박 인원</div></div>
+      <div class="stat"><div class="n">17</div><div class="l">토요일 최대</div></div>
+      <div class="stat"><div class="n">8</div><div class="l">아이들 (토)</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">선생님 프로그램</div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ROOMS -->
+  <section id="rooms">
+    <div class="sec-head"><span class="sec-tag">잠자리</span><h2>방 3개 + 거실 배치</h2></div>
+    <p class="sec-note">아기 셋(3세)은 부모 옆, 큰아이는 함께, 어른1은 독립방, 호스트(준휘네)는 거실. 한 팀당 한 공간.</p>
+    <div class="rooms">
+      <div class="room reveal d1">
+        <div class="rname">🛏️ 안방 <span class="badge">가장 큰 방</span></div>
+        <div class="rmeta">가족1 · 4명</div>
+        <div class="chips">
+          <span class="chip adult">가족1 부부</span>
+          <span class="chip kid">하린 10세</span>
+          <span class="chip kid">유건 7세</span>
+        </div>
+      </div>
+      <div class="room reveal d2">
+        <div class="rname">🛏️ 방 2 <span class="badge">침대+아기</span></div>
+        <div class="rmeta">가족2 · 4명</div>
+        <div class="chips">
+          <span class="chip adult">가족2 부부</span>
+          <span class="chip kid">연우 8세</span>
+          <span class="chip kid">연성 3세</span>
+        </div>
+      </div>
+      <div class="room reveal d3">
+        <div class="rname">🚪 방 3 <span class="badge">작은 방</span></div>
+        <div class="rmeta">어른1 · 1명 · 프라이빗</div>
+        <div class="chips">
+          <span class="chip adult">어른1</span>
+        </div>
+      </div>
+      <div class="room host reveal d4">
+        <div class="rname">🛋️ 거실 <span class="badge">호스트</span></div>
+        <div class="rmeta">가족3 (준휘네) · 4명</div>
+        <div class="chips">
+          <span class="chip adult">준휘네 부부</span>
+          <span class="chip kid">준휘 7세</span>
+          <span class="chip kid">지구 3세</span>
+        </div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><i class="dot kid"></i> 아이</span>
+      <span><i class="dot adult"></i> 어른</span>
+      <span>💡 아기(3세)는 벽쪽·가드 자리, 무드등 준비</span>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section id="schedule">
+    <div class="sec-head"><span class="sec-tag" style="background:var(--sky)">일정</span><h2>4일 시간표</h2></div>
+    <p class="sec-note">3세 낮잠 · 폭염 · 선생님 프로그램을 축으로. 오전엔 물놀이, 낮잠 뒤 실내 프로그램.</p>
+    <div class="days">
+
+      <div class="day fri reveal d1">
+        <div class="day-head"><span class="dow">금</span><span class="dsub">도착 &amp; 취침</span><span class="pill">가볍게</span></div>
+        <div class="tl">
+          <div class="tl-item"><div class="tl-time">19:00</div><div class="tl-body"><div class="t">도착 · 짐 풀기 · 아이 인사</div></div></div>
+          <div class="tl-item"><div class="tl-time">20:00</div><div class="tl-body"><div class="t">배달 저녁</div><div class="d">치킨·피자·족발 (첫날 요리 부담 X)</div></div></div>
+          <div class="tl-item"><div class="tl-time">21:00</div><div class="tl-body"><div class="t">씻기 · 짧은 놀이</div></div></div>
+          <div class="tl-item"><div class="tl-time">21:30</div><div class="tl-body"><div class="t">아이 취침 루틴</div><div class="d">→ 어른 야식 · 수다</div></div></div>
+        </div>
+      </div>
+
+      <div class="day sat wide reveal d2">
+        <div class="day-head"><span class="dow">토</span><span class="dsub">전원 17명 · 가족4 합류</span><span class="pill">하이라이트</span></div>
+        <div class="tl">
+          <div class="tl-item"><div class="tl-time">07:30</div><div class="tl-body"><div class="t">기상 · 아침</div><div class="d">당번제 (토스트·시리얼·과일·계란)</div></div></div>
+          <div class="tl-item"><div class="tl-time">09:00</div><div class="tl-body"><div class="t">가족4 합류 <span class="d">(선후 6세 · 정후 3세)</span></div></div></div>
+          <div class="tl-item"><div class="tl-time">09:30</div><div class="tl-body"><div class="t">물놀이장 <span class="tag out">외출</span></div><div class="d">전원 · 오전(더위 전) · 아쿠아슈즈·그늘텐트</div></div></div>
+          <div class="tl-item"><div class="tl-time">12:00</div><div class="tl-body"><div class="t">점심</div><div class="d">물놀이장 근처 식당</div></div></div>
+          <div class="tl-item"><div class="tl-time">13:00</div><div class="tl-body"><div class="t">3세 낮잠 · 어른 교대 휴식</div></div></div>
+          <div class="tl-item"><div class="tl-time">15:00</div><div class="tl-body"><div class="t">미술 교실 <span class="tag prog">선생님</span></div><div class="d">손도장·스티커·클레이</div></div></div>
+          <div class="tl-item"><div class="tl-time">16:30</div><div class="tl-body"><div class="t">자유놀이 · 간식</div></div></div>
+          <div class="tl-item"><div class="tl-time">17:30</div><div class="tl-body"><div class="t">요리 교실 <span class="tag prog">선생님</span></div><div class="d">주먹밥·미니피자 → 저녁 준비 겸</div></div></div>
+          <div class="tl-item"><div class="tl-time">18:30</div><div class="tl-body"><div class="t">다같이 저녁 → 가족4 귀가</div></div></div>
+          <div class="tl-item"><div class="tl-time">19:30</div><div class="tl-body"><div class="t">거실 영화관 <span class="tag fun">놀이</span></div><div class="d">불 끄고 팝콘 🍿</div></div></div>
+          <div class="tl-item"><div class="tl-time">20:30</div><div class="tl-body"><div class="t">씻기 · 취침</div></div></div>
+        </div>
+      </div>
+
+      <div class="day sun reveal d3">
+        <div class="day-head"><span class="dow">일</span><span class="dsub">13명 · 나들이</span><span class="pill">여유</span></div>
+        <div class="tl">
+          <div class="tl-item"><div class="tl-time">08:00</div><div class="tl-body"><div class="t">기상 · 아침</div></div></div>
+          <div class="tl-item"><div class="tl-time">09:00</div><div class="tl-body"><div class="t">아침 율동 체육 <span class="tag prog">선생님</span></div><div class="d">에너지 발산</div></div></div>
+          <div class="tl-item"><div class="tl-time">10:00</div><div class="tl-body"><div class="t">외출 나들이 <span class="tag out">외출</span></div><div class="d">잡월드 체험 / 실내 체험관 · 키즈카페 / 물놀이 2탄</div></div></div>
+          <div class="tl-item"><div class="tl-time">13:00</div><div class="tl-body"><div class="t">점심</div><div class="d">외식 or 집밥</div></div></div>
+          <div class="tl-item"><div class="tl-time">14:00</div><div class="tl-body"><div class="t">낮잠 · 휴식</div></div></div>
+          <div class="tl-item"><div class="tl-time">16:00</div><div class="tl-body"><div class="t">과학 놀이 · 보물찾기 <span class="tag prog">선생님</span></div><div class="d">화산·슬라임·미션 게임</div></div></div>
+          <div class="tl-item"><div class="tl-time">17:30</div><div class="tl-body"><div class="t">삼겹살 파티 <span class="tag fun">이벤트</span></div><div class="d">다같이 굽기 🥩</div></div></div>
+          <div class="tl-item"><div class="tl-time">19:00</div><div class="tl-body"><div class="t">장기자랑 · 보드게임</div><div class="d">아이 무대, 어른 관객</div></div></div>
+        </div>
+      </div>
+
+      <div class="day mon reveal d4">
+        <div class="day-head"><span class="dow">월</span><span class="dsub">점심 전 해산</span><span class="pill">마무리</span></div>
+        <div class="tl">
+          <div class="tl-item"><div class="tl-time">08:00</div><div class="tl-body"><div class="t">기상 · 간단 아침</div></div></div>
+          <div class="tl-item"><div class="tl-time">09:00</div><div class="tl-body"><div class="t">마무리 게임 · 대청소 <span class="tag prog">선생님</span></div><div class="d">정리 릴레이 + 단체사진 · 방명록</div></div></div>
+          <div class="tl-item"><div class="tl-time">10:30</div><div class="tl-body"><div class="t">짐 · 이불 정리</div></div></div>
+          <div class="tl-item"><div class="tl-time">11:30</div><div class="tl-body"><div class="t">마지막 점심 → 작별 · 해산</div><div class="d">간단히 or 근처 식당</div></div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section id="programs">
+    <div class="sec-head"><span class="sec-tag" style="background:var(--berry)">프로그램</span><h2>선생님 프로그램</h2></div>
+    <div class="teacher-note reveal d1">
+      <b>담임 순번제</b> — 어른 9명이 돌아가며 40~90분씩 맡으면 아무도 안 지치고, 나머지 어른은 쉬는 시간. 준비물은 다이소·마트에서 미리 한 번에!
+    </div>
+    <div class="progs">
+      <div class="prog reveal d1"><div class="ico">🎨</div><h3>미술 교실</h3><div class="who">전 연령</div>
+        <div class="desc">물감 손도장, 스티커 콜라주, 클레이 만들기. 3세는 스티커·물감, 큰아이는 작품 만들기.</div>
+        <div class="mat"><b>준비물</b> 스케치북·물감·스티커·클레이·앞치마(큰 옷)</div></div>
+      <div class="prog reveal d2"><div class="ico">🍙</div><h3>요리 교실</h3><div class="who">6세+ 주도 · 3세 보조</div>
+        <div class="desc">주먹밥·미니피자 토핑·쿠키 데코. 만든 걸 그대로 저녁으로!</div>
+        <div class="mat"><b>준비물</b> 밥·김·치즈·또띠아·토핑·쿠키·설탕펜</div></div>
+      <div class="prog reveal d3"><div class="ico">🤸</div><h3>율동 체육</h3><div class="who">전 연령</div>
+        <div class="desc">음악 틀고 동작 따라하기, 스카프 흔들기, 얼음땡. 아침 에너지 발산용.</div>
+        <div class="mat"><b>준비물</b> 블루투스 스피커·스카프·풍선</div></div>
+      <div class="prog reveal d1"><div class="ico">🔬</div><h3>과학 놀이</h3><div class="who">5세+ · 3세 관람</div>
+        <div class="desc">베이킹소다 화산, 무지개 우유, 슬라임 만들기. 눈이 휘둥그레지는 순간.</div>
+        <div class="mat"><b>준비물</b> 베이킹소다·식초·물감·우유·주방세제</div></div>
+      <div class="prog reveal d2"><div class="ico">🗺️</div><h3>보물찾기</h3><div class="who">전 연령</div>
+        <div class="desc">집안 곳곳 쪽지 숨기고 미션 수행. 큰아이·작은아이 팀전으로.</div>
+        <div class="mat"><b>준비물</b> 쪽지·작은 선물/사탕</div></div>
+      <div class="prog reveal d3"><div class="ico">📸</div><h3>마무리 게임</h3><div class="who">전 연령</div>
+        <div class="desc">누가 빨리 정리하나 릴레이, 추억 그림 방명록, 단체 사진.</div>
+        <div class="mat"><b>준비물</b> 전지·색연필·카메라</div></div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section id="checklist">
+    <div class="sec-head"><span class="sec-tag" style="background:var(--sun);color:#5a3d05">준비물</span><h2>준비물 체크리스트</h2></div>
+    <p class="sec-note">체크는 이 기기에 자동 저장돼요. 역할 나눠서 채우면 끝!</p>
+    <div class="checks" id="checks">
+      <div class="checkcard reveal d1">
+        <h3><span class="ci">🍽️</span> 식사</h3>
+        <label class="ck"><input type="checkbox"><span>금요일 저녁 배달 예약 (치킨·피자·족발)</span></label>
+        <label class="ck"><input type="checkbox"><span>토요일 아침거리 (토스트·시리얼·과일·계란)</span></label>
+        <label class="ck"><input type="checkbox"><span>일요일 삼겹살 · 쌈채소 · 상추</span></label>
+        <label class="ck"><input type="checkbox"><span>물 · 음료 · 아이 음료 넉넉히</span></label>
+        <label class="ck"><input type="checkbox"><span>간식 (과자·아이스크림·과일)</span></label>
+        <label class="ck"><input type="checkbox"><span>17명 룸 식당 예약 (토/일 점심)</span></label>
+      </div>
+      <div class="checkcard reveal d2">
+        <h3><span class="ci">🌊</span> 물놀이 세트</h3>
+        <label class="ck"><input type="checkbox"><span>아쿠아슈즈 (아이 수만큼)</span></label>
+        <label class="ck"><input type="checkbox"><span>여벌옷 · 수건 넉넉히</span></label>
+        <label class="ck"><input type="checkbox"><span>그늘 텐트 · 돗자리</span></label>
+        <label class="ck"><input type="checkbox"><span>선크림 · 물안경 · 튜브</span></label>
+        <label class="ck"><input type="checkbox"><span>성남시 물놀이장 개장 요일 확인</span></label>
+      </div>
+      <div class="checkcard reveal d3">
+        <h3><span class="ci">🎨</span> 프로그램 재료</h3>
+        <label class="ck"><input type="checkbox"><span>미술: 스케치북·물감·스티커·클레이</span></label>
+        <label class="ck"><input type="checkbox"><span>요리: 밥·김·치즈·또띠아·토핑·쿠키</span></label>
+        <label class="ck"><input type="checkbox"><span>율동: 스피커·스카프·풍선</span></label>
+        <label class="ck"><input type="checkbox"><span>과학: 베이킹소다·식초·우유·세제</span></label>
+        <label class="ck"><input type="checkbox"><span>보물찾기: 쪽지·작은 선물 · 방명록 전지</span></label>
+      </div>
+      <div class="checkcard reveal d4">
+        <h3><span class="ci">🛏️</span> 잠자리 &amp; 기타</h3>
+        <label class="ck"><input type="checkbox"><span>여분 이불 · 매트 약 7세트</span></label>
+        <label class="ck"><input type="checkbox"><span>무드등 · 3세 낙상 가드</span></label>
+        <label class="ck"><input type="checkbox"><span>구급상자 · 상비약 · 모기약</span></label>
+        <label class="ck"><input type="checkbox"><span>물티슈 · 쓰레기봉투 · 지퍼백</span></label>
+        <label class="ck"><input type="checkbox"><span>카메라 · 보조배터리</span></label>
+      </div>
+    </div>
+    <button class="reset" id="reset">체크 전체 초기화</button>
+  </section>
+
+</main>
+
+<footer>
+  <div>🏖️ 신흥역 하늘채에서, 우리들의 여름 · <span class="heart">즐거운 3박 4일 되세요</span></div>
+</footer>
+
+<script>
+  // Checklist persistence
+  (function(){
+    var KEY='summer-gathering-checks-v1';
+    var boxes=[].slice.call(document.querySelectorAll('#checks input[type=checkbox]'));
+    var saved={};
+    try{ saved=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){}
+    boxes.forEach(function(b,i){
+      if(saved[i]) b.checked=true;
+      b.addEventListener('change',function(){
+        var state={};
+        boxes.forEach(function(x,j){ if(x.checked) state[j]=1; });
+        try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){}
+      });
+    });
+    document.getElementById('reset').addEventListener('click',function(){
+      boxes.forEach(function(b){ b.checked=false; });
+      try{ localStorage.removeItem(KEY); }catch(e){}
+    });
+  })();
+</script>
+
+</body>
+</html>
