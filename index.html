@@ -72,24 +72,12 @@
   .daychip.hot .dpart b{color:#fff}
   .daychip.hot .dpart i{color:rgba(255,255,255,.85)}
   .daychip.hot .dlabel{color:rgba(255,255,255,.92);border-left-color:rgba(255,255,255,.45)}
-  .stats{margin-top:30px;display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap}
-  .statgroup{display:flex;background:var(--card);border:1px solid var(--line);border-radius:20px;
-    box-shadow:var(--shadow-sm);overflow:hidden}
-  .statgroup .stat{position:relative;padding:16px 26px;min-width:128px;text-align:center}
-  .statgroup .stat + .stat{border-left:1px solid var(--line)}
-  .stat .n{font-family:"Jua";font-size:34px;color:var(--tangerine);line-height:1}
-  .stat .n .unit{font-size:15px;margin-left:1px}
-  .stat .l{font-size:13.5px;color:var(--ink);margin-top:8px}
-  .stat .sub{font-size:12px;color:var(--ink-soft);margin-top:3px}
-  .stat.max{background:var(--tangerine-soft)}
-  .stat .tagmax{position:absolute;top:10px;right:11px;font-family:"Gaegu";font-weight:700;font-size:11px;
-    color:#fff;background:var(--tangerine);border-radius:7px;padding:1px 7px}
-  .statprog{display:flex;align-items:center;gap:13px;background:var(--leaf-soft);border:1px solid #C4DEA6;
-    border-radius:20px;padding:15px 24px;box-shadow:var(--shadow-sm)}
-  .statprog .pico{font-size:28px;line-height:1}
-  .statprog .pbody b{font-family:"Gowun Dodum";font-weight:700;font-size:13px;color:var(--leaf-ink);display:block}
-  .statprog .pn{font-family:"Jua";font-size:28px;color:var(--leaf);line-height:1.15;display:block}
-  .statprog .pn i{font-style:normal;font-size:14px;margin-left:1px}
+  .infobar{margin-top:28px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .info{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);
+    border-radius:999px;padding:10px 18px;font-size:14px;color:var(--ink);box-shadow:var(--shadow-sm);
+    text-decoration:none;transition:.18s}
+  a.info:hover{border-color:var(--tangerine);color:var(--tangerine)}
+  a.info:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
 
   /* SECTION */
   section{padding:46px 0 8px}
@@ -183,7 +171,7 @@
   /* polish */
   section{scroll-margin-top:72px}
   h1,h2,h3{text-wrap:balance}
-  .tl-time,.stat .n,.statprog .pn,.daychip .dpart i{font-variant-numeric:tabular-nums}
+  .tl-time{font-variant-numeric:tabular-nums}
   nav a.n.active{background:var(--tangerine-soft);color:var(--tangerine)}
   a.n:focus-visible,.reset:focus-visible,label.ck input:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
   label.ck:hover input:not(:checked){border-color:var(--leaf)}
@@ -193,9 +181,6 @@
     .day.wide{grid-column:auto}
     header.hero{padding:44px 0 30px}
     .tl-item{grid-template-columns:52px 1fr;gap:10px}
-    .statgroup{width:100%;max-width:420px}
-    .statgroup .stat{flex:1;min-width:0;padding:14px 10px}
-    .statprog{width:100%;max-width:420px;justify-content:center}
   }
 </style>
 </head>
@@ -216,33 +201,18 @@
 <header class="hero">
   <div class="sundeco"></div>
   <div class="wrap">
-    <div class="kicker reveal d1">신흥역하늘채랜더스원1단지 104-302</div>
+    <div class="kicker reveal d1">7/10(금) ~ 7/13(월) · 3박 4일</div>
     <h1 class="reveal d1">우리들의 <span class="em">여름 모임</span></h1>
-    <p class="subtitle reveal d2">7/10(금)~7/13(월), 원영 다혜 형진 영은 성은 대가족 모임</p>
+    <p class="subtitle reveal d2">원영 · 다혜 · 형진 · 영은 · 성은, 다섯 팀이 모이는 대가족 모임</p>
     <div class="datebar reveal d2">
-      <span class="daychip"><span class="dpart"><b>금</b><i>7/10</i></span><span class="dlabel">도착</span></span>
-      <span class="daychip hot"><span class="dpart"><b>토</b><i>7/11</i></span><span class="dlabel">전원 17명</span></span>
-      <span class="daychip"><span class="dpart"><b>일</b><i>7/12</i></span><span class="dlabel">13명</span></span>
-      <span class="daychip"><span class="dpart"><b>월</b><i>7/13</i></span><span class="dlabel">점심 해산</span></span>
+      <span class="daychip"><span class="dpart"><b>금</b></span><span class="dlabel">저녁 도착</span></span>
+      <span class="daychip hot"><span class="dpart"><b>토</b></span><span class="dlabel">전원 17명</span></span>
+      <span class="daychip"><span class="dpart"><b>일</b></span><span class="dlabel">13명</span></span>
+      <span class="daychip"><span class="dpart"><b>월</b></span><span class="dlabel">점심 해산</span></span>
     </div>
-    <div class="stats reveal d3">
-      <div class="statgroup">
-        <div class="stat">
-          <div class="n">13<span class="unit">명</span></div>
-          <div class="l">숙박 인원</div>
-          <div class="sub">어른 7 · 아이 6</div>
-        </div>
-        <div class="stat max">
-          <span class="tagmax">최대</span>
-          <div class="n">17<span class="unit">명</span></div>
-          <div class="l">토요일</div>
-          <div class="sub">어른 9 · 아이 8</div>
-        </div>
-      </div>
-      <div class="statprog">
-        <span class="pico">🎨</span>
-        <div class="pbody"><b>선생님 프로그램</b><span class="pn">7<i>가지</i></span></div>
-      </div>
+    <div class="infobar reveal d3">
+      <a class="info" href="https://map.naver.com/p/search/신흥역하늘채랜더스원1단지" target="_blank" rel="noopener">📍 신흥역하늘채랜더스원1단지 104-302</a>
+      <span class="info">🛏 숙박 13명 · 어른 7 아이 6</span>
     </div>
   </div>
 </header>
