@@ -91,7 +91,6 @@
   .room{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow);
     position:relative;transition:.2s;border-top:6px solid var(--leaf)}
   .room:hover{transform:translateY(-3px)}
-  .room.host{border-top-color:var(--sun)}
   .room .rname{font-family:"Jua";font-size:20px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
   .room .rmeta{font-size:13px;color:var(--ink-soft);margin:3px 0 14px}
   .badge{font-family:"Gaegu";font-weight:700;font-size:13px;color:var(--tangerine);background:var(--tangerine-soft);
@@ -100,11 +99,6 @@
   .chip{font-size:13.5px;padding:6px 12px;border-radius:11px;font-family:"Gowun Dodum";white-space:nowrap}
   .chip.kid{background:var(--sky-soft);color:var(--sky-ink);border:1px solid #A9D3ED}
   .chip.adult{background:var(--leaf-soft);color:var(--leaf-ink);border:1px solid #BFDCA0}
-  .legend{display:flex;gap:16px;margin:18px 2px 0;font-size:13px;color:var(--ink-soft);flex-wrap:wrap}
-  .legend span{display:inline-flex;align-items:center;gap:6px}
-  .dot{width:12px;height:12px;border-radius:4px;display:inline-block}
-  .dot.kid{background:var(--sky-soft);border:1px solid #A9D3ED}
-  .dot.adult{background:var(--leaf-soft);border:1px solid #BFDCA0}
 
   /* SCHEDULE */
   .days{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -260,7 +254,7 @@
           <div class="tl-item"><div class="tl-time">13:00</div><div class="tl-body"><div class="t">점심</div><div class="d">가족별로 흩어져서 자유롭게</div></div></div>
           <div class="tl-item"><div class="tl-time">14:00</div><div class="tl-body"><div class="t">3세 낮잠 · AI 동화 공방 <span class="tag tch">선생님</span></div><div class="d">첫째 4명이 이야기 짓고 AI로 그림·목소리·주제가 만들어 동화 영상 한 편 완성</div></div></div>
           <div class="tl-item"><div class="tl-time">16:30</div><div class="tl-body"><div class="t">놀이터 놀이 <span class="tag out">외출</span></div><div class="d">낮잠 깬 동생들과 단지 놀이터, 해 기울 때</div></div></div>
-          <div class="tl-item"><div class="tl-time">18:00</div><div class="tl-body"><div class="t">삼겹살 파티 <span class="tag fun">이벤트</span></div><div class="d">다같이 굽기 🥩</div></div></div>
+          <div class="tl-item"><div class="tl-time">18:00</div><div class="tl-body"><div class="t">치킨 파티 <span class="tag fun">이벤트</span></div><div class="d">배달로 간편하게 🍗</div></div></div>
           <div class="tl-item"><div class="tl-time">19:00</div><div class="tl-body"><div class="t">AI 동화 상영회 · 장기자랑 <span class="tag fun">이벤트</span></div><div class="d">형·누나가 만든 동화를 동생들에게 공개 🎬</div></div></div>
           <div class="tl-item"><div class="tl-time">21:00</div><div class="tl-body"><div class="t">촛불 행사 🕯️ <span class="tag fun">이벤트</span></div><div class="d">둘째들 잠들면 거실 불 끄고, 수련회처럼 한 사람씩 한마디 · LED 캔들</div></div></div>
         </div>
@@ -313,47 +307,42 @@
   <!-- ROOMS (방 배정) -->
   <section id="rooms">
     <div class="sec-head"><span class="sec-tag">방 배정</span><h2>방 3개 + 거실 배치</h2></div>
-    <p class="sec-note">아기 셋(3세)은 부모 옆, 큰아이는 함께, 어른1은 독립방, 호스트(준휘네)는 거실. 한 팀당 한 공간.</p>
+    <p class="sec-note">한 팀당 한 공간씩, 아기들은 부모 옆에서.</p>
     <div class="rooms">
       <div class="room reveal d1">
-        <div class="rname">🛏️ 안방 <span class="badge">가장 큰 방</span></div>
-        <div class="rmeta">가족1 · 4명</div>
+        <div class="rname">🛏️ 안방 <span class="badge">침대 방</span></div>
+        <div class="rmeta">하린이와 유건이네 · 4명</div>
         <div class="chips">
-          <span class="chip adult">가족1 부부</span>
+          <span class="chip adult">엄마 아빠</span>
           <span class="chip kid">하린 10세</span>
           <span class="chip kid">유건 7세</span>
         </div>
       </div>
       <div class="room reveal d2">
-        <div class="rname">🛏️ 방 2 <span class="badge">침대+아기</span></div>
-        <div class="rmeta">가족2 · 4명</div>
+        <div class="rname">🛏️ 방 2 <span class="badge">온돌방</span></div>
+        <div class="rmeta">연우와 연성이네 · 4명</div>
         <div class="chips">
-          <span class="chip adult">가족2 부부</span>
+          <span class="chip adult">엄마 아빠</span>
           <span class="chip kid">연우 8세</span>
           <span class="chip kid">연성 3세</span>
         </div>
       </div>
       <div class="room reveal d3">
         <div class="rname">🚪 방 3 <span class="badge">작은 방</span></div>
-        <div class="rmeta">어른1 · 1명 · 프라이빗</div>
+        <div class="rmeta">형진이네 · 1명</div>
         <div class="chips">
-          <span class="chip adult">어른1</span>
+          <span class="chip adult">형진</span>
         </div>
       </div>
-      <div class="room host reveal d4">
-        <div class="rname">🛋️ 거실 <span class="badge">호스트</span></div>
-        <div class="rmeta">가족3 (준휘네) · 4명</div>
+      <div class="room reveal d4">
+        <div class="rname">🛋️ 거실</div>
+        <div class="rmeta">준휘와 지구네 · 4명</div>
         <div class="chips">
-          <span class="chip adult">준휘네 부부</span>
+          <span class="chip adult">엄마 아빠</span>
           <span class="chip kid">준휘 7세</span>
           <span class="chip kid">지구 3세</span>
         </div>
       </div>
-    </div>
-    <div class="legend">
-      <span><i class="dot kid"></i> 아이</span>
-      <span><i class="dot adult"></i> 어른</span>
-      <span>💡 아기(3세)는 벽쪽·가드 자리, 무드등 준비</span>
     </div>
   </section>
 
@@ -366,7 +355,7 @@
         <h3><span class="ci">🍽️</span> 식사</h3>
         <label class="ck"><input type="checkbox"><span>금요일 저녁 배달 예약 (치킨·피자·족발)</span></label>
         <label class="ck"><input type="checkbox"><span>토요일 아침거리 (토스트·시리얼·과일·계란)</span></label>
-        <label class="ck"><input type="checkbox"><span>일요일 삼겹살 · 쌈채소 · 상추</span></label>
+        <label class="ck"><input type="checkbox"><span>일요일 저녁 치킨 주문</span></label>
         <label class="ck"><input type="checkbox"><span>물 · 음료 · 아이 음료 넉넉히</span></label>
         <label class="ck"><input type="checkbox"><span>간식 (과자·아이스크림·과일)</span></label>
         <label class="ck"><input type="checkbox"><span>토 점심 17명 식당 예약 · 일 MOKA 입장권 사전 예약</span></label>
