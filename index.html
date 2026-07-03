@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>우리들의 여름 모임 · 신흥역</title>
-<meta name="description" content="신흥역 하늘채, 금~월 3박 4일 가족 모임 — 잠자리 배치 · 4일 시간표 · 선생님 프로그램 · 준비물 체크리스트">
+<meta name="description" content="7/10(금)~7/13(월) 3박 4일 대가족 모임 — 4일 시간표 · 선생님 프로그램 · 방 배정 · 준비물 체크리스트">
 <meta property="og:title" content="우리들의 여름 모임 · 신흥역">
-<meta property="og:description" content="금~월 3박 4일 · 잠자리 배치 · 4일 시간표 · 선생님 프로그램 · 준비물">
+<meta property="og:description" content="7/10(금)~7/13(월) 3박 4일 · 시간표 · 프로그램 · 방 배정 · 준비물">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#FFF7EC">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏖️</text></svg>">
@@ -17,7 +17,7 @@
 <style>
   :root{
     --paper:#FFF7EC; --paper2:#FBEBD5; --card:#FFFDF8;
-    --ink:#3B2C1F; --ink-soft:#8A7862; --line:#EBDCC5;
+    --ink:#3B2C1F; --ink-soft:#75614A; --line:#EBDCC5;
     --tangerine:#EC7A3C; --tangerine-soft:#FBE1CD;
     --leaf:#5C9C41; --leaf-soft:#DDEBC7; --leaf-ink:#33591F;
     --sky:#3B93CC; --sky-soft:#CFE6F4; --sky-ink:#175074;
@@ -45,7 +45,7 @@
     background:rgba(255,247,236,.82);border-bottom:1px solid var(--line)}
   nav .wrap{display:flex;align-items:center;gap:6px;height:56px}
   nav .brand{font-family:"Jua";font-size:19px;color:var(--tangerine);margin-right:auto;white-space:nowrap;flex:none}
-  nav a.n{font-size:14px;color:var(--ink-soft);text-decoration:none;padding:7px 11px;border-radius:999px;transition:.18s;white-space:nowrap}
+  nav a.n{font-size:14px;color:var(--ink-soft);text-decoration:none;padding:10px 13px;border-radius:999px;transition:.18s;white-space:nowrap}
   nav a.n:hover{background:var(--tangerine-soft);color:var(--tangerine)}
   .navlinks{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
   .navlinks::-webkit-scrollbar{display:none}
@@ -65,13 +65,11 @@
     background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
   .daychip .dpart{display:flex;align-items:baseline;gap:5px}
   .daychip .dpart b{font-size:18px;color:var(--tangerine);line-height:1}
-  .daychip .dpart i{font-style:normal;font-size:12px;color:var(--ink-soft);font-family:"Gowun Dodum"}
   .daychip .dlabel{font-size:13px;color:var(--ink-soft);font-family:"Gowun Dodum";padding-left:10px;
     border-left:1px solid var(--line)}
-  .daychip.hot{background:var(--tangerine);color:#fff;border-color:var(--tangerine)}
-  .daychip.hot .dpart b{color:#fff}
-  .daychip.hot .dpart i{color:rgba(255,255,255,.85)}
-  .daychip.hot .dlabel{color:rgba(255,255,255,.92);border-left-color:rgba(255,255,255,.45)}
+  .daychip.hot{background:var(--tangerine-soft);border-color:var(--tangerine)}
+  .daychip.hot .dpart b{color:#A8471A}
+  .daychip.hot .dlabel{color:#6B3413;border-left-color:#E9B896;font-weight:700}
   .infobar{margin-top:28px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
   .info{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);
     border-radius:999px;padding:10px 18px;font-size:14px;color:var(--ink);box-shadow:var(--shadow-sm);
@@ -111,7 +109,7 @@
   .day.mon .day-head{background:linear-gradient(100deg,var(--leaf),#78B255)}
   .day-head .dow{font-family:"Jua";font-size:22px}
   .day-head .dsub{font-size:13px;opacity:.92}
-  .day-head .pill{margin-left:auto;font-family:"Gaegu";font-weight:700;font-size:12px;background:rgba(255,255,255,.25);padding:3px 10px;border-radius:999px}
+  .day-head .pill{margin-left:auto;font-family:"Gaegu";font-weight:700;font-size:12px;background:rgba(255,253,248,.95);color:var(--ink);padding:3px 10px;border-radius:999px}
   .tl{padding:8px 20px 18px}
   .tl-item{display:grid;grid-template-columns:58px 1fr;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
   .tl-item:last-child{border-bottom:none}
@@ -142,7 +140,7 @@
   .checkcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow-sm)}
   .checkcard h3{font-size:17px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
   .checkcard h3 .ci{font-size:20px}
-  label.ck{display:flex;align-items:flex-start;gap:10px;padding:6px 0;cursor:pointer;font-size:14.5px;user-select:none}
+  label.ck{display:flex;align-items:flex-start;gap:10px;padding:9px 0;cursor:pointer;font-size:14.5px;user-select:none}
   label.ck input{appearance:none;-webkit-appearance:none;width:20px;height:20px;border:2px solid var(--line);border-radius:7px;
     margin-top:2px;flex:none;cursor:pointer;transition:.15s;background:#fff;position:relative}
   label.ck input:checked{background:var(--leaf);border-color:var(--leaf)}
