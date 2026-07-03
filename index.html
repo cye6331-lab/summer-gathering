@@ -11,9 +11,8 @@
 <meta name="theme-color" content="#FFF7EC">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏖️</text></svg>">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gaegu:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
   :root{
     --paper:#FFF7EC; --paper2:#FBEBD5; --card:#FFFDF8;
@@ -28,7 +27,7 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    font-family:"Gowun Dodum",system-ui,sans-serif;
+    font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo",sans-serif;
     color:var(--ink); line-height:1.65;
     background:
       radial-gradient(1200px 520px at 78% -8%, #FFE7C2 0%, rgba(255,231,194,0) 60%),
@@ -38,13 +37,13 @@
     -webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-  h1,h2,h3,.display{font-family:"Jua",sans-serif;font-weight:400;letter-spacing:.2px;line-height:1.25}
+  h1,h2,h3,.display{font-weight:800;letter-spacing:-.4px;line-height:1.25}
 
   /* NAV */
   nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(9px);
     background:rgba(255,247,236,.82);border-bottom:1px solid var(--line)}
   nav .wrap{display:flex;align-items:center;gap:6px;height:56px}
-  nav .brand{font-family:"Jua";font-size:19px;color:var(--tangerine);margin-right:auto;white-space:nowrap;flex:none}
+  nav .brand{font-weight:800;font-size:19px;color:var(--tangerine);margin-right:auto;white-space:nowrap;flex:none}
   nav a.n{font-size:14px;color:var(--ink-soft);text-decoration:none;padding:10px 13px;border-radius:999px;transition:.18s;white-space:nowrap}
   nav a.n:hover{background:var(--tangerine-soft);color:var(--tangerine)}
   .navlinks{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
@@ -54,18 +53,18 @@
   header.hero{padding:64px 0 42px;text-align:center;position:relative;overflow:hidden}
   .sundeco{position:absolute;top:-46px;right:8%;width:150px;height:150px;border-radius:50%;
     background:radial-gradient(circle at 42% 40%,#FFD874,#F4A73C);opacity:.5;filter:blur(2px)}
-  .kicker{display:inline-block;font-family:"Gaegu";font-weight:700;font-size:16px;color:var(--berry);
+  .kicker{display:inline-block;font-weight:600;font-size:14.5px;color:var(--berry);
     background:#fff;border:2px dashed var(--berry);border-radius:999px;padding:5px 18px;margin-bottom:20px;
     transform:rotate(-1.5deg)}
   header.hero h1{font-size:clamp(38px,8vw,74px);color:var(--ink);position:relative}
   header.hero h1 .em{color:var(--tangerine)}
   .subtitle{margin-top:14px;font-size:clamp(15px,3.6vw,19px);color:var(--ink-soft)}
   .datebar{margin-top:26px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
-  .daychip{display:inline-flex;align-items:center;gap:10px;font-family:"Jua";padding:8px 14px;border-radius:14px;
+  .daychip{display:inline-flex;align-items:center;gap:10px;font-weight:700;padding:8px 14px;border-radius:14px;
     background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
   .daychip .dpart{display:flex;align-items:baseline;gap:5px}
   .daychip .dpart b{font-size:18px;color:var(--tangerine);line-height:1}
-  .daychip .dlabel{font-size:13px;color:var(--ink-soft);font-family:"Gowun Dodum";padding-left:10px;
+  .daychip .dlabel{font-size:13px;color:var(--ink-soft);font-weight:400;padding-left:10px;
     border-left:1px solid var(--line)}
   .daychip.hot{background:var(--tangerine-soft);border-color:var(--tangerine)}
   .daychip.hot .dpart b{color:#A8471A}
@@ -80,7 +79,7 @@
   /* SECTION */
   section{padding:46px 0 8px}
   .sec-head{display:flex;align-items:center;gap:12px;margin-bottom:26px}
-  .sec-tag{font-family:"Jua";font-size:14px;color:#fff;background:var(--leaf);border-radius:10px;padding:4px 12px;box-shadow:var(--shadow-sm)}
+  .sec-tag{font-weight:700;font-size:14px;color:#fff;background:var(--leaf);border-radius:10px;padding:4px 12px;box-shadow:var(--shadow-sm)}
   .sec-head h2{font-size:clamp(24px,5vw,34px)}
   .sec-note{color:var(--ink-soft);font-size:15px;margin:-14px 0 26px}
 
@@ -89,12 +88,12 @@
   .room{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow);
     position:relative;transition:.2s;border-top:6px solid var(--leaf)}
   .room:hover{transform:translateY(-3px)}
-  .room .rname{font-family:"Jua";font-size:20px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .room .rname{font-weight:800;font-size:20px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
   .room .rmeta{font-size:13px;color:var(--ink-soft);margin:3px 0 14px}
-  .badge{font-family:"Gaegu";font-weight:700;font-size:13px;color:var(--tangerine);background:var(--tangerine-soft);
+  .badge{font-weight:600;font-size:12.5px;color:var(--tangerine);background:var(--tangerine-soft);
     border-radius:8px;padding:2px 9px}
   .chips{display:flex;flex-wrap:wrap;gap:7px}
-  .chip{font-size:13.5px;padding:6px 12px;border-radius:11px;font-family:"Gowun Dodum";white-space:nowrap}
+  .chip{font-size:13.5px;padding:6px 12px;border-radius:11px;white-space:nowrap}
   .chip.kid{background:var(--sky-soft);color:var(--sky-ink);border:1px solid #A9D3ED}
   .chip.adult{background:var(--leaf-soft);color:var(--leaf-ink);border:1px solid #BFDCA0}
 
@@ -107,16 +106,16 @@
   .day.sat .day-head{background:linear-gradient(100deg,var(--tangerine),#F0954F)}
   .day.sun .day-head{background:linear-gradient(100deg,var(--sky),#54A6D8)}
   .day.mon .day-head{background:linear-gradient(100deg,var(--leaf),#78B255)}
-  .day-head .dow{font-family:"Jua";font-size:22px}
+  .day-head .dow{font-weight:800;font-size:22px}
   .day-head .dsub{font-size:13px;opacity:.92}
-  .day-head .pill{margin-left:auto;font-family:"Gaegu";font-weight:700;font-size:12px;background:rgba(255,253,248,.95);color:var(--ink);padding:3px 10px;border-radius:999px}
+  .day-head .pill{margin-left:auto;font-weight:600;font-size:12px;background:rgba(255,253,248,.95);color:var(--ink);padding:3px 10px;border-radius:999px}
   .tl{padding:8px 20px 18px}
   .tl-item{display:grid;grid-template-columns:58px 1fr;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
   .tl-item:last-child{border-bottom:none}
-  .tl-time{font-family:"Jua";font-size:14px;color:var(--tangerine);padding-top:1px}
+  .tl-time{font-weight:700;font-size:14px;color:var(--tangerine);padding-top:1px}
   .tl-body .t{font-size:15px}
   .tl-body .d{font-size:13px;color:var(--ink-soft)}
-  .tag{display:inline-block;font-size:11px;font-family:"Gaegu";font-weight:700;padding:1px 8px;border-radius:7px;margin-left:6px;vertical-align:middle}
+  .tag{display:inline-block;font-size:11px;font-weight:600;padding:1px 8px;border-radius:7px;margin-left:6px;vertical-align:middle}
   .tag.out{background:var(--sky-soft);color:var(--sky-ink)}
   .tag.tch{background:var(--leaf-soft);color:var(--leaf-ink)}
   .tag.fun{background:#F7E1AE;color:#8A5B12}
@@ -127,13 +126,13 @@
   .prog:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
   .prog .ico{font-size:30px;line-height:1}
   .prog h3{font-size:19px;margin:10px 0 2px}
-  .prog .who{font-family:"Gaegu";font-weight:700;font-size:13px;color:var(--berry)}
+  .prog .who{font-weight:600;font-size:13px;color:var(--berry)}
   .prog .desc{font-size:14px;margin:9px 0 12px;color:var(--ink)}
   .prog .mat{font-size:12.5px;color:var(--ink-soft);border-top:1px dashed var(--line);padding-top:10px}
   .prog .mat b{color:var(--leaf-ink)}
   .teacher-note{background:var(--leaf-soft);border:1px solid #C4DEA6;border-radius:16px;padding:16px 20px;margin-bottom:24px;
     font-size:14.5px;color:var(--leaf-ink)}
-  .teacher-note b{font-family:"Jua"}
+  .teacher-note b{font-weight:700}
 
   /* CHECKLIST */
   .checks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -146,7 +145,7 @@
   label.ck input:checked{background:var(--leaf);border-color:var(--leaf)}
   label.ck input:checked::after{content:"✓";position:absolute;color:#fff;font-size:13px;left:3px;top:-2px;font-weight:700}
   label.ck input:checked + span{color:var(--ink-soft);text-decoration:line-through}
-  .reset{margin-top:18px;font-family:"Gaegu";font-weight:700;font-size:14px;background:none;border:2px dashed var(--line);
+  .reset{margin-top:18px;font-weight:600;font-size:14px;background:none;border:2px dashed var(--line);
     color:var(--ink-soft);border-radius:999px;padding:8px 18px;cursor:pointer;transition:.18s}
   .reset:hover{border-color:var(--berry);color:var(--berry)}
 
